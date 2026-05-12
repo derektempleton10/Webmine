@@ -1,2 +1,0 @@
-# Webmine
-Project Webmine Scripts
