@@ -1,0 +1,110 @@
+/* ==========================================================================
+   1. Inner Page Container (Services & Contact)
+   ========================================================================== */
+.inner-page {
+  background-color: var(--color-white);
+  min-height: 100vh;
+  /* Clears the fixed nav bar so the heading is never hidden */
+  padding-top: 90px;
+}
+
+/* Centered content column with classic side margins */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  /* ~20px side padding so text never touches the screen edge */
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* ==========================================================================
+   2. Page Headings
+   ========================================================================== */
+.page-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--color-gold);
+  text-align: left;
+  /* Fluid: ~28px on phones scaling to ~32px on desktop */
+  font-size: clamp(1.75rem, 1.5vw + 1.25rem, 2rem);
+  /* Section spacing: 64px phones -> 96px desktop. More space above... */
+  margin-top: clamp(4rem, 6vw, 6rem);
+  /* ...than below */
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   3. Page Content / Body Text
+   ========================================================================== */
+.page-content {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--color-charcoal);
+  /* Fluid: ~17px on phones scaling to ~18px on desktop */
+  font-size: clamp(1.0625rem, 0.25vw + 1rem, 1.125rem);
+  line-height: 1.6;
+  text-align: left;
+  /* Minimum height so the placeholder preview shows realistic proportions */
+  min-height: 300px;
+}
+
+/* ==========================================================================
+   4. Page Action Area (Services button)
+   ========================================================================== */
+.page-action {
+  /* Section spacing between the content and the action button */
+  margin-top: clamp(4rem, 6vw, 6rem);
+  margin-bottom: clamp(4rem, 6vw, 6rem);
+}
+
+/* ==========================================================================
+   5. Footer Layout
+   ========================================================================== */
+.footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-white);
+  /* ~40px above and below */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* Desktop: one row, logo left, copyright right */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+}
+
+.footer-copyright {
+  color: var(--color-warm-white);
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   6. Responsive Rules (Up to 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .inner-page {
+    /* Slightly reduced offset for the smaller mobile nav bar */
+    padding-top: 75px;
+  }
+  
+  /* Mobile footer: centered, stacked in one column */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
