@@ -1,0 +1,75 @@
+/* ==========================================================================
+   1. Design Tokens (Variables)
+   ========================================================================== */
+:root {
+    /* Colors */
+    --color-gold: #A8820F;
+    --color-charcoal: #1F1F1F;
+    --color-warm-white: #FAF8F4;
+    --color-white: #FFFFFF;
+
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'DM Serif Display', serif;
+
+    /* Shared Behaviors */
+    --transition-fast: 0.2s ease;
+}
+
+/* ==========================================================================
+   2. Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* ==========================================================================
+   3. Base Typography & Font Rules
+   ========================================================================== */
+body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-charcoal);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 
+   DM Serif Display rule: 
+   Single weight only — never bold or faux bold.
+*/
+.font-serif-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
