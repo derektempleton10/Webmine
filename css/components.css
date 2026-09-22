@@ -1,0 +1,169 @@
+/* ==========================================================================
+   1. Navigation Bar
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-warm-white);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+}
+
+.nav-logo {
+    height: 32px;
+    width: auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 700;
+    color: var(--color-charcoal);
+    padding: 0.25rem 0;
+    transition: color var(--transition-fast);
+    border-bottom: 4px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.nav-link.current-page {
+    border-bottom-color: var(--color-gold);
+}
+
+/* ==========================================================================
+   2. Buttons
+   ========================================================================== */
+.btn-pill,
+.btn-regular {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: transform var(--transition-fast);
+    text-align: center;
+}
+
+.btn-pill:hover,
+.btn-regular:hover,
+.btn-pill:active,
+.btn-regular:active {
+    transform: scale(1.05);
+}
+
+.btn-pill {
+    background-color: var(--color-charcoal);
+    color: var(--color-gold);
+    border: 2px solid var(--color-gold);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    white-space: nowrap;
+}
+
+.btn-regular {
+    background-color: var(--color-gold);
+    color: var(--color-warm-white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ==========================================================================
+   3. Hero Section
+   ========================================================================== */
+.hero {
+    min-height: 100vh;
+    background-color: var(--color-warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 90px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-headline {
+    font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
+    color: var(--color-charcoal);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subheadline {
+    font-size: clamp(1.0625rem, 1.5vw + 0.5rem, 1.375rem);
+    color: var(--color-charcoal);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   4. Mobile Responsive Components (Up to 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem 1.25rem;
+    }
+    
+    .nav-logo {
+        height: 24px;
+    }
+    
+    .nav-right {
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 0.75rem;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .btn-pill {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.8rem;
+        border-width: 2px;
+    }
+    
+    .hero {
+        padding-top: 75px;
+    }
+}
